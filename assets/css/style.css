@@ -15,7 +15,7 @@ html{
     border: 20px;
 }
 body {
-    font-family: garamond;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 18px;
     color: purple;
     background: url("../images/nasa.jpg");
