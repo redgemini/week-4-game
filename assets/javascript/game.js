@@ -5,7 +5,8 @@
 //Need random number generator for Game Start - number should be between 19-120
 //Player wins if player total matched random number
 //When win/loss - restart game with new random number, crystal values hidden, and updated wins and losses
-
+// Resource to create array for crystal addition and function - for, for-in and forEach (Const)
+        //http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#closures
 
 //-----Variables-----
 
@@ -14,7 +15,8 @@ var purpleCrystal   = "0";
 var blueCrystal     = "0";
 var whiteCrystal    = "0";
 var greenCrystal    = "0";
-var crystalValue    = parseInt(purpleCrystal + blueCrystal + whiteCrystal + greenCrystal);
+var crystalValue    = "parseInt(purpleCrystal + blueCrystal + whiteCrystal + greenCrystal)";
+
 //Score
 var yourScore   = 0;
 var gameScore   = 0;
@@ -30,7 +32,6 @@ var lossCounter = 0;
 var randomNum = function ( min,max){
     return Math.floor ( Math.random () * (max - min + 1)) + min;
 }
-
 
 //--Function Start Game--
 
@@ -71,8 +72,15 @@ $("#green").click(function(){
     alert("testgreen");
 });
 
+
+//Woring through how to address crystals and yourScore
 var addValue = function(crystalValue){
     
+}
+if (yourScore == gameScore) {
+  // run this code
+} else {
+  // run this code
 }
 
 //--Console.log Test--
@@ -90,5 +98,10 @@ console.log("crystalValue" + crystalValue);
 
 //-----Process-----
 startGame();
+
+
+
+//Questions for TAs
+//how to link the randomNum of Crystals to yourScore
 
 
