@@ -50,51 +50,43 @@ whiteCrystal    = randomNum(1,12);
 greenCrystal    = randomNum(1,12);
 
 
-//console.log RandomNum
-console.log("test");
-console.log(yourScore);
-console.log(purpleCrystal + blueCrystal + whiteCrystal + greenCrystal);
-}
-
 //HTML
-
-
-
-
-
-
+$(".gameScore").text(gameScore);
+$(".yourScore").html(yourScore);
 
 
 //Crystal Clicks
-$("#purple") .click(function(){
+$("#purple").click(function(){
     alert("testpurple");
 });
 
-$("#blue") .click(function(){
+$("#blue").click(function(){
     alert("testblue");
 });
 
-$("#white") .click(function(){
+$("#white").click(function(){
     alert("testwhite");
 });
 
-$("#green") .click(function(){
+$("#green").click(function(){
     alert("testgreen");
 });
 
 
-
-
-
-
-
-
-
-//GameScore
-
-//-----Process-----
-startGame(); {
+//--Console.log Test--
+console.log("test");
+console.log(gameScore);
+console.log(yourScore);
+console.log("Purple" + purpleCrystal);
+console.log("Blue" + blueCrystal);
+console.log("White" + whiteCrystal);
+console.log("green" + greenCrystal);
 
 
 }
+//GameScore
+
+//-----Process-----
+startGame();
+
 
