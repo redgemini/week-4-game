@@ -31,13 +31,14 @@ var randomNum = function ( min,max){
     return Math.floor ( Math.random () * (max - min + 1)) + min;
 }
 
+
 //--Function Start Game--
 
 function startGame(){
 
 //--Function Reset--
 
-//Set yourScore to 0
+//Set yourScore
 var yourScore   = 0;
 
 //Set to number between (19-120)
@@ -51,7 +52,7 @@ greenCrystal    = randomNum(1,12);
 
 
 //HTML
-$(".gameScore").text(gameScore);
+$(".gameScore").html(gameScore);
 $(".yourScore").html(yourScore);
 
 
