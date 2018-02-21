@@ -10,11 +10,11 @@
 //-----Variables-----
 
 //Crystal Scores
-var purpleCrystal   = 0;
-var blueCrystal     = 0;
-var whiteCrystal    = 0;
-var greenCrystal    = 0;
-
+var purpleCrystal   = "0";
+var blueCrystal     = "0";
+var whiteCrystal    = "0";
+var greenCrystal    = "0";
+var crystalValue    = parseInt(purpleCrystal + blueCrystal + whiteCrystal + greenCrystal);
 //Score
 var yourScore   = 0;
 var gameScore   = 0;
@@ -39,7 +39,7 @@ function startGame(){
 //--Function Reset--
 
 //Set yourScore
-var yourScore   = 0;
+var yourScore   = crystalValue;
 
 //Set to number between (19-120)
 gameScore       = randomNum(19,120);
@@ -50,11 +50,9 @@ blueCrystal     = randomNum(1,12);
 whiteCrystal    = randomNum(1,12);
 greenCrystal    = randomNum(1,12);
 
-
 //HTML
 $(".gameScore").html(gameScore);
 $(".yourScore").html(yourScore);
-
 
 //Crystal Clicks
 $("#purple").click(function(){
@@ -73,6 +71,9 @@ $("#green").click(function(){
     alert("testgreen");
 });
 
+var addValue = function(crystalValue){
+    
+}
 
 //--Console.log Test--
 console.log("test");
@@ -82,7 +83,7 @@ console.log("Purple" + purpleCrystal);
 console.log("Blue" + blueCrystal);
 console.log("White" + whiteCrystal);
 console.log("green" + greenCrystal);
-
+console.log("crystalValue" + crystalValue);
 
 }
 //GameScore
