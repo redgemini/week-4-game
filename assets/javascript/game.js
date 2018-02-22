@@ -15,7 +15,6 @@ var purpleCrystal   = "0";
 var blueCrystal     = "0";
 var whiteCrystal    = "0";
 var greenCrystal    = "0";
-var crystalValue    = "parseInt(purpleCrystal + blueCrystal + whiteCrystal + greenCrystal)";
 
 //Score
 var yourScore   = 0;
@@ -40,9 +39,9 @@ function startGame(){
 //--Function Reset--
 
 //Set yourScore
-var yourScore   = crystalValue;
+yourScore   = 0;
 
-//Set to number between (19-120)
+//Set target to number between (19-120)
 gameScore       = randomNum(19,120);
 
 //set crystals to number between (1-12)              
@@ -51,17 +50,23 @@ blueCrystal     = randomNum(1,12);
 whiteCrystal    = randomNum(1,12);
 greenCrystal    = randomNum(1,12);
 
-//HTML
-$(".gameScore").html(gameScore);
-$(".yourScore").html(yourScore);
 
 //Crystal Clicks
 $("#purple").click(function(){
-    alert("testpurple");
+yourScore += purpleCrystal;
+$(".yourScore").html(yourScore);
+
+if (yourScore == gameScore) {
+$(".yourScore").append("  YOU WIN!!!")
+} else if(yourScore>gameScore) {
+$(".yourScore").html(yourScore + "  You Lose!")
+}
+
 });
 
 $("#blue").click(function(){
-    alert("testblue");
+yourScore += blueCrystal;
+$(".yourScore").html(yourScore);
 });
 
 $("#white").click(function(){
@@ -77,6 +82,9 @@ $("#green").click(function(){
 var addValue = function(crystalValue){
     
 }
+
+$(".gameScore").html(gameScore);
+$(".yourScore").html(yourScore);
 if (yourScore == gameScore) {
   // run this code
 } else {
@@ -91,7 +99,6 @@ console.log("Purple" + purpleCrystal);
 console.log("Blue" + blueCrystal);
 console.log("White" + whiteCrystal);
 console.log("green" + greenCrystal);
-console.log("crystalValue" + crystalValue);
 
 }
 //GameScore
@@ -103,5 +110,5 @@ startGame();
 
 //Questions for TAs
 //how to link the randomNum of Crystals to yourScore
-
+//$('.img-class').attr('src', '/path/to/new/img');
 
