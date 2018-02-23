@@ -50,65 +50,147 @@ blueCrystal     = randomNum(1,12);
 whiteCrystal    = randomNum(1,12);
 greenCrystal    = randomNum(1,12);
 
-
-//Crystal Clicks
-$("#purple").click(function(){
-yourScore += purpleCrystal;
-$(".yourScore").html(yourScore);
-
-if (yourScore == gameScore) {
-$(".yourScore").append("  YOU WIN!!!")
-} else if(yourScore>gameScore) {
-$(".yourScore").html(yourScore + "  You Lose!")
-}
-
-});
-
-$("#blue").click(function(){
-yourScore += blueCrystal;
-$(".yourScore").html(yourScore);
-});
-
-$("#white").click(function(){
-    alert("testwhite");
-});
-
-$("#green").click(function(){
-    alert("testgreen");
-});
-
-
-//Woring through how to address crystals and yourScore
-var addValue = function(crystalValue){
-    
-}
-
+//HTML
 $(".gameScore").html(gameScore);
 $(".yourScore").html(yourScore);
-if (yourScore == gameScore) {
-  // run this code
-} else {
-  // run this code
-}
 
 //--Console.log Test--
 console.log("test");
 console.log(gameScore);
-console.log(yourScore);
 console.log("Purple" + purpleCrystal);
 console.log("Blue" + blueCrystal);
 console.log("White" + whiteCrystal);
 console.log("green" + greenCrystal);
-
 }
-//GameScore
+//Crystal Clicks/Your Score
+
+//Purple Click
+$("#purple").click(function(){
+yourScore += purpleCrystal;
+$(".yourScore").html(yourScore);
+
+if (yourScore > gameScore) {
+  $(".yourScore").html(yourScore + "  Oh No! You Lose! Try Again!");
+
+  //Console.log/Test
+  console.log("You Lose");
+  
+  //Update Loss counter
+  lossCounter++;
+
+  //Update loss count
+  $(".lossCounter").html(lossCounter);
+
+  //if Loss...Restart game
+  startGame();
+
+} 
+
+else if (yourScore === gameScore) {
+  $(".yourScore").html("  YOU WIN!!!");
+
+  //Update Win Counter
+  winCounter++;
+
+  //Console.log/Test
+  console.log("You Win");
+
+  //Update Win Counter
+  $(".winCounter").html(winCounter);
+
+  //if Win...Restart game
+  startGame();
+} 
+
+});
+
+$("#blue").click(function() {
+  yourScore += blueCrystal;
+  $(".yourScore").html(yourScore);
+
+  if (yourScore > gameScore) {
+    $(".yourScore").html(yourScore + "  You Lose!");
+
+    //Update Loss counter
+    lossCounter++;
+
+    //if Win...Restart game
+    startGame();
+  } else if (yourScore === gameScore) {
+    $(".yourScore").html("  YOU WIN!!!");
+
+    //Update Win Counter
+    winCounter++;
+
+    //if Win...Restart game
+    startGame();
+  }
+});
+
+$("#white").click(function() {
+  yourScore += whiteCrystal;
+  $(".yourScore").html(yourScore);
+
+  if (yourScore > gameScore) {
+    $(".yourScore").html(yourScore + "  You Lose!");
+
+    //Update Loss counter
+    lossCounter++;
+
+    //if Win...Restart game
+    startGame();
+  } else if (yourScore === gameScore) {
+    $(".yourScore").html("  YOU WIN!!!");
+
+    //Update Win Counter
+    winCounter++;
+
+    //if Win...Restart game
+    startGame();
+  }
+});
+
+$("#green").click(function() {
+  yourScore += greenCrystal;
+  $(".yourScore").html(yourScore);
+
+  if (yourScore > gameScore) {
+    $(".yourScore").html(yourScore + "  You Lose!");
+
+    //Update Loss counter
+    lossCounter++;
+
+    //if Win...Restart game
+    startGame();
+  } else if (yourScore === gameScore) {
+    $(".yourScore").html("  YOU WIN!!!");
+
+    //Update Win Counter
+    winCounter++;
+
+    //if Win...Restart game
+    startGame();
+  }
+});
+//HTML
+$(".gameScore").html(gameScore);
+$(".yourScore").html(yourScore);
+$(".lossCounter").html(lossCounter);
+$(".winCounter").html(winCounter);
+
+//Console.log /Test
+console.log("yourScore" + yourScore);
+console.log("winCounter" +winCounter);
+console.log("lossCounter" + lossCounter);
+
+
+//Check your score for win and reset game
+
 
 //-----Process-----
 startGame();
 
-
-
 //Questions for TAs
 //how to link the randomNum of Crystals to yourScore
 //$('.img-class').attr('src', '/path/to/new/img');
-
+//Creating object for crystals

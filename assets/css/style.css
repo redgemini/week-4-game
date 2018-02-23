@@ -10,15 +10,16 @@ html{
     font-weight: bold;
     text-align: center;
     padding:2%;
-    background: url("../images/bluegreen.jpg");
+    background: url("../images/coolcolors.jpg");
     border-color: #28a745!important;
     border: 20px;
 }
 body {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    margin: 100%;
     font-size: 18px;
     color: purple;
-    background: url("../images/nasa.jpg");
+    background: url("../images/nasa2.png");
     margin:10%;
     margin-top:5%;
 }
