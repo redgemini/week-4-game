@@ -114,6 +114,7 @@ $("#blue").click(function() {
     winCounter++;
 
     //Console.log/Test
+    alert("You Win");
     console.log("You Win");
 
     //Update Win Counter
@@ -121,11 +122,11 @@ $("#blue").click(function() {
 
     //if Win...Restart game
     startGame();
-
   } else if (yourScore > gameScore) {
     $(".yourScore").html(yourScore + "  Oh No! You Lose! Try Again!");
 
     //Console.log/Test
+    alert("You Lose");
     console.log("You Lose");
 
     //Update Loss counter
@@ -150,6 +151,7 @@ $("#white").click(function() {
     winCounter++;
 
     //Console.log/Test
+    alert("You Win");
     console.log("You Win");
 
     //Update Win Counter
@@ -157,11 +159,11 @@ $("#white").click(function() {
 
     //if Win...Restart game
     startGame();
-
   } else if (yourScore > gameScore) {
     $(".yourScore").html(yourScore + "  Oh No! You Lose! Try Again!");
 
     //Console.log/Test
+    alert("You Lose");
     console.log("You Lose");
 
     //Update Loss counter
@@ -186,6 +188,7 @@ $("#green").click(function() {
     winCounter++;
 
     //Console.log/Test
+    alert("You Win");
     console.log("You Win");
 
     //Update Win Counter
@@ -193,11 +196,11 @@ $("#green").click(function() {
 
     //if Win...Restart game
     startGame();
-    
   } else if (yourScore > gameScore) {
     $(".yourScore").html(yourScore + "  Oh No! You Lose! Try Again!");
 
     //Console.log/Test
+    alert("You Lose");
     console.log("You Lose");
 
     //Update Loss counter
