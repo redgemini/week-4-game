@@ -19,7 +19,7 @@ body {
     margin: 100%;
     font-size: 18px;
     color: purple;
-    background: url("../images/nasa2.png");
+    background: url("../images/nasa.jpg");
     margin:10%;
     margin-top:5%;
 }
@@ -44,3 +44,4 @@ font-size:12px;
     background:forestgreen;
     text-align: center;
 }
+

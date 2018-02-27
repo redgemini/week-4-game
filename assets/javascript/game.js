@@ -66,6 +66,7 @@ console.log("green" + greenCrystal);
 //Purple Click
 $("#purple").click(function(){
 yourScore += purpleCrystal;
+$(".purpleCrystal").html(yourScore);
 $(".yourScore").html(yourScore);
 
 if (yourScore === gameScore) {
@@ -221,3 +222,4 @@ startGame();
 //how to link the randomNum of Crystals to yourScore
 //$('.img-class').attr('src', '/path/to/new/img');
 //Creating object for crystals
+//Solution for Text in HTML $("#time-left").append("<h2>About 5 Seconds Left!</h2>");
